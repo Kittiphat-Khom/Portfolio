@@ -128,9 +128,24 @@
   var lb = document.getElementById('lb');
   var lbImg = document.getElementById('lbImg');
   var lbClose = document.getElementById('lbClose');
+  var lbPrev = document.getElementById('lbPrev');
+  var lbNext = document.getElementById('lbNext');
+  var lbImages = [];
+  var lbCurrent = 0;
 
-  function openLb(src, alt) {
-    lbImg.src = src; lbImg.alt = alt || '';
+  function showLbImage(index) {
+    if (!lbImages.length) return;
+    lbCurrent = (index + lbImages.length) % lbImages.length;
+    var img = lbImages[lbCurrent];
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+    var hasMultiple = lbImages.length > 1;
+    if (lbPrev) lbPrev.hidden = !hasMultiple;
+    if (lbNext) lbNext.hidden = !hasMultiple;
+  }
+  function openLb(images, index) {
+    lbImages = images && images.length ? images : [];
+    showLbImage(index || 0);
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -138,11 +153,21 @@
     lb.classList.remove('open');
     document.body.style.overflow = '';
   }
+  function moveLb(step) {
+    showLbImage(lbCurrent + step);
+  }
   if (lb) {
     lb.addEventListener('click', closeLb);
     lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
     lbClose.addEventListener('click', closeLb);
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
+    if (lbPrev) lbPrev.addEventListener('click', function(e) { e.stopPropagation(); moveLb(-1); });
+    if (lbNext) lbNext.addEventListener('click', function(e) { e.stopPropagation(); moveLb(1); });
+    document.addEventListener('keydown', function(e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') moveLb(-1);
+      if (e.key === 'ArrowRight') moveLb(1);
+    });
   }
 
   /* ---------- Carousels ---------- */
@@ -172,9 +197,9 @@
     setInterval(function () { go(current + 1); }, 3000);
 
     // click image to open lightbox
-    track.querySelectorAll('img').forEach(function (img) {
+    track.querySelectorAll('img').forEach(function (img, i) {
       img.style.cursor = 'zoom-in';
-      img.addEventListener('click', function () { openLb(img.src, img.alt); });
+      img.addEventListener('click', function () { openLb(Array.prototype.slice.call(imgs), i); });
     });
   });
 
