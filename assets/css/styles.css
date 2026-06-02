@@ -304,13 +304,15 @@ section { position: relative; }
 .skill-card .sc-ic { width: 34px; height: 34px; border-radius: 9px; background: var(--accent-bg); color: var(--accent-ink); display: grid; place-items: center; }
 .skill-card .sc-ic svg { width: 18px; height: 18px; }
 .skill-card h3 { font-size: 17px; font-weight: 600; }
-.skill-card .sc-sub { font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
+  display: inline-flex; align-items: center; gap: 7px;
   font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft);
   padding: 6px 12px; border-radius: 8px; background: var(--bg-2); border: 1px solid var(--line-soft);
   transition: color .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease);
 }
+.chip img { width: 16px; height: 16px; object-fit: contain; flex: 0 0 auto; }
+.chip img.icon-invert { filter: invert(1) brightness(1.15); opacity: .9; }
 .chip:hover { color: var(--accent-ink); border-color: var(--accent); background: var(--accent-bg); }
 
 /* ============================================================
