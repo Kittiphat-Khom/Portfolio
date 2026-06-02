@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kittiphat Khomsanith — Full-stack Developer</title>
+  <meta name="description" content="Kittiphat 'Camp' Khomsanith — CS student & Full-stack Developer passionate about building web apps and AI-powered products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand">
+    <span class="dot"></span>
+    <span class="mono">My Portfolio</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about"><span class="n">01</span>About</a>
+    <a href="#skills"><span class="n">02</span>Skills</a>
+    <a href="#work"><span class="n">03</span>Projects</a>
+    <a href="#experience"><span class="n">04</span>Experience</a>
+    <a href="#contact"><span class="n">05</span>Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button class="nav-burger" id="burger" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" id="menuClose">[ close ]</button>
+  <a href="#about"><span class="n">01</span>About</a>
+  <a href="#skills"><span class="n">02</span>Skills</a>
+  <a href="#work"><span class="n">03</span>Projects</a>
+  <a href="#experience"><span class="n">04</span>Experience</a>
+  <a href="#contact"><span class="n">05</span>Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+
+      <!-- Left: text -->
+      <div class="hero-left">
+        <div class="status reveal"><span class="live"></span> Open to Full-time Opportunities</div>
+        <h1 class="reveal" data-d="1">
+          Hello,<br />
+          This is <span class="name">Kittiphat</span>,<br />
+          I'm a<br />
+          <span class="role">Full-Stack</span><br />
+          <span class="role">Developer.</span>
+        </h1>
+        <div class="hero-meta reveal" data-d="3">
+          <a href="#work" class="btn">
+            View Projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn ghost">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Right: code block -->
+      <div class="hero-code reveal" data-d="2">
+        <div class="code-block">
+          <div class="cb-bar">
+            <span class="cb-dot r"></span>
+            <span class="cb-dot y"></span>
+            <span class="cb-dot g"></span>
+            <span class="cb-filename">developer.js</span>
+          </div>
+          <pre><code><span class="t-k">const</span> <span class="t-v">developer</span> <span class="t-b">= {</span>
+  <span class="t-p">name</span><span class="t-b">:</span>  <span class="t-s">'Kittiphat Khomsanith'</span><span class="t-b">,</span>
+  <span class="t-p">alias</span><span class="t-b">:</span> <span class="t-s">'Camp'</span><span class="t-b">,</span>
+  <span class="t-p">role</span><span class="t-b">:</span>  <span class="t-s">'Full-Stack Developer'</span><span class="t-b">,</span>
+  <span class="t-p">skills</span><span class="t-b">: [</span>
+    <span class="t-s">'React.js'</span><span class="t-b">,</span> <span class="t-s">'Node.js'</span><span class="t-b">,</span>
+    <span class="t-s">'Python'</span><span class="t-b">,</span>  <span class="t-s">'Flutter'</span><span class="t-b">,</span>
+    <span class="t-s">'SQL'</span><span class="t-b">,</span>     <span class="t-s">'MongoDB'</span>
+  <span class="t-b">],</span>
+  <span class="t-p">hardWorker</span><span class="t-b">:</span>   <span class="t-t">true</span><span class="t-b">,</span>
+  <span class="t-p">quickLearner</span><span class="t-b">:</span> <span class="t-t">true</span><span class="t-b">,</span>
+  <span class="t-p">hireable</span><span class="t-b">:</span> <span class="t-k">function</span><span class="t-b">() {</span>
+    <span class="t-k">return</span> <span class="t-b">(</span>
+      <span class="t-k">this</span><span class="t-b">.</span><span class="t-p">hardWorker</span> <span class="t-b">&amp;&amp;</span>
+      <span class="t-k">this</span><span class="t-b">.</span><span class="t-p">quickLearner</span> <span class="t-b">&amp;&amp;</span>
+      <span class="t-k">this</span><span class="t-b">.</span><span class="t-p">skills</span><span class="t-b">.</span><span class="t-p">length</span> <span class="t-b">&gt;= </span><span class="t-t">5</span>
+    <span class="t-b">);</span>
+  <span class="t-b">}</span>
+<span class="t-b">};</span></code></pre>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats row below grid -->
+    <div class="hero-stats reveal" data-d="4" style="margin-top:52px;">
+      <div class="stat">
+        <div class="num" data-count="3" data-suffix="+">0</div>
+        <div class="lbl">Years Coding</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="4" data-suffix="+">0</div>
+        <div class="lbl">Projects</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="12" data-suffix="+">0</div>
+        <div class="lbl">Tools &amp; Languages</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="accent">3.75</span></div>
+        <div class="lbl">GPA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section-pad wrap" id="about">
+    <div class="about-grid">
+      <div class="about-body">
+        <div class="eyebrow reveal"><span class="idx">01</span> About</div>
+        <h2 class="reveal" data-d="1" style="font-size:clamp(28px,4vw,44px);font-weight:600;letter-spacing:-0.02em;margin:18px 0 28px;line-height:1.12;">
+          Who I Am
+        </h2>
+        <p class="reveal" data-d="2">
+          Hi, I'm <strong>Camp</strong>, a CS student at Bangkok University. I enjoy building complete software products across frontend, backend, databases, and mobile applications.
+        </p>
+        <p class="reveal" data-d="2">
+          I recently gained hands-on experience during my frontend internship at <strong>Geekstart Co., Ltd.</strong>, and I’m continuing to grow toward full-stack development by combining web technologies, data, and AI tools to solve real product problems.
+        </p>
+        <div class="about-facts reveal" data-d="3">
+          <div class="row"><span class="k">Location</span><span class="v">Bangkok, Thailand</span></div>
+          <div class="row"><span class="k">Education</span><span class="v">Computer Science · Bangkok University</span></div>
+          <div class="row"><span class="k">Recently</span><span class="v">Frontend Developer Intern @ Geekstart</span></div>
+          <div class="row"><span class="k">Focus</span><span class="v">Web Apps · Full-stack · Mobile · AI Tools</span></div>
+          <div class="row"><span class="k">Languages</span><span class="v">Thai (Native) · English (Conversational)</span></div>
+        </div>
+      </div>
+      <div class="reveal" data-d="2">
+        <div class="portrait">
+          <img src="assets/img/projects/MyPhoto/MyPhoto.jpg" alt="Portrait of Kittiphat Khomsanith" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="section-pad wrap" id="skills">
+    <div class="section-head">
+      <div class="eyebrow reveal"><span class="idx">02</span> Skills &amp; Stack</div>
+      <h2 class="reveal" data-d="1">Tools I build with.</h2>
+      <p class="reveal" data-d="2">Technologies I use across the full product stack — from UI to data.</p>
+    </div>
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-card reveal" data-d="1">
+        <div class="sc-head">
+          <span class="sc-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+          </span>
+          <div><h3>Frontend</h3><div class="sc-sub">// interface layer</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">JavaScript</span>
+          <span class="chip">React.js</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">Flutter</span>
+          <span class="chip">.NET MAUI</span>
+        </div>
+      </div>
+      <!-- Backend & Data -->
+      <div class="skill-card reveal" data-d="2">
+        <div class="sc-head">
+          <span class="sc-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+          </span>
+          <div><h3>Backend &amp; Database</h3><div class="sc-sub">// logic &amp; data</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">Node.js</span>
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+          <span class="chip">Java</span>
+          <span class="chip">SQL</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Supabase</span>
+        </div>
+      </div>
+      <!-- Tools & Design -->
+      <div class="skill-card reveal" data-d="3">
+        <div class="sc-head">
+          <span class="sc-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/></svg>
+          </span>
+          <div><h3>Tools &amp; Design</h3><div class="sc-sub">// workflow &amp; create</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">Git &amp; GitHub</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Postman</span>
+          <span class="chip">SBERT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="section-pad wrap" id="work">
+    <div class="proj-top">
+      <div class="section-head" style="margin-bottom:0;">
+        <div class="eyebrow reveal"><span class="idx">03</span> Selected Work</div>
+        <h2 class="reveal" data-d="1">Projects I've built.</h2>
+      </div>
+      <div class="filters reveal" data-d="2" id="filters">
+        <button data-f="all" aria-pressed="true">All<span class="c">5</span></button>
+        <button data-f="webapp" aria-pressed="false">Web App<span class="c">3</span></button>
+        <button data-f="ui" aria-pressed="false">UI / UX<span class="c">2</span></button>
+      </div>
+    </div>
+
+    <div class="proj-grid" id="projGrid">
+
+      <!-- Project 1: Reading Journal -->
+      <article class="proj-card reveal" data-cat="webapp" data-d="1">
+        <div class="proj-thumb carousel bg-teal no-round" data-carousel>
+          <div class="carousel-track">
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading1.png" alt="Reading Journal 1" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading2.png" alt="Reading Journal 2" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading3.png" alt="Reading Journal 3" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading4.png" alt="Reading Journal 4" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading5.png" alt="Reading Journal 5" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading6.png" alt="Reading Journal 6" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading7.png" alt="Reading Journal 7" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading8.png" alt="Reading Journal 8" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading9.png" alt="Reading Journal 9" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading10.png" alt="Reading Journal 10" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading11.png" alt="Reading Journal 11" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading12.png" alt="Reading Journal 12" /></div>
+            <div class="cs"><img src="assets/img/projects/Reading Jounal/Reading13.png" alt="Reading Journal 13" /></div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag webapp">Web App</span>
+          <h3>
+            <a href="https://zoological-possibility-production-8abf.up.railway.app/" target="_blank" rel="noopener">
+              Reading Journal
+            </a>
+          </h3>
+          <p>Full-stack web app for book lovers — chapter tracking, progress stats, community reviews &amp; ratings, admin dashboard, and an ML recommendation engine (SBERT + cosine similarity) across 10,000+ books.</p>
+          <div class="proj-stack">
+            <span>React</span><span>Node.js</span><span>Express.js</span><span>Python</span><span>MySQL</span><span>SBERT</span>
+          </div>
+          <a class="proj-link" href="https://zoological-possibility-production-8abf.up.railway.app/" target="_blank" rel="noopener">
+            Live Demo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2: Plank -->
+      <article class="proj-card reveal" data-cat="webapp" data-d="2">
+        <div class="proj-thumb carousel bg-plank no-round" data-carousel>
+          <div class="carousel-track">
+            <div class="cs"><img src="assets/img/projects/Plank/1.png" alt="Plank screen 1" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/2.png" alt="Plank screen 2" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/3.png" alt="Plank screen 3" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/4.png" alt="Plank screen 4" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/5.png" alt="Plank screen 5" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/6.png" alt="Plank screen 6" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/7.png" alt="Plank screen 7" /></div>
+            <div class="cs"><img src="assets/img/projects/Plank/8.png" alt="Plank screen 8" /></div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag webapp">Web App</span>
+          <h3>
+            <a href="https://plank-six.vercel.app/#login" target="_blank" rel="noopener">
+              Plank
+            </a>
+          </h3>
+          <p>A real-time project management web app for software teams — sprint boards, sprint planning, issue tracking, live cursors, presence updates, and shared workspace collaboration powered by Supabase Realtime.</p>
+          <div class="proj-stack">
+            <span>React</span><span>Vite</span><span>Supabase</span><span>PostgreSQL</span>
+          </div>
+          <a class="proj-link" href="https://plank-six.vercel.app/#login" target="_blank" rel="noopener">
+            Live Demo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3: Reepjot -->
+      <article class="proj-card reveal" data-cat="webapp" data-d="3">
+        <div class="proj-thumb carousel bg-purple" data-carousel>
+          <div class="carousel-track">
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep1.png" alt="Reepjot screen 1" /></div>
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep2.png" alt="Reepjot screen 2" /></div>
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep3.png" alt="Reepjot screen 3" /></div>
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep4.png" alt="Reepjot screen 4" /></div>
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep5.png" alt="Reepjot screen 5" /></div>
+            <div class="cs"><img src="assets/img/projects/Reepjot/reep6.png" alt="Reepjot screen 6" /></div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag mobile">Mobile App</span>
+          <h3>Reepjot</h3>
+          <p>Mobile application finance tracker — log income &amp; expenses by category, visualize spending via donut chart &amp; 6-month trend, track savings goals, and set recurring rules. Runs fully offline with SQLite.</p>
+          <div class="proj-stack">
+            <span>.NET MAUI</span><span>C#</span><span>SQLite</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Helphy -->
+      <article class="proj-card reveal" data-cat="ui" data-d="4">
+        <div class="proj-thumb carousel bg-helphy no-round" data-carousel>
+          <div class="carousel-track">
+            <div class="cs"><img src="assets/img/projects/Helphy/HelphyUI.png" alt="Helphy UX/UI design board" /></div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag ui">UI / UX</span>
+          <h3>Helphy</h3>
+          <p>UX/UI design for a health-focused vegetable recommendation app — covering onboarding, grocery browsing, meal planning, cart flow, payment, and chatbot assistance.</p>
+          <div class="proj-stack">
+            <span>Figma</span><span>UX Research</span><span>User Flow</span><span>Prototyping</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Mocca -->
+      <article class="proj-card reveal" data-cat="ui" data-d="4">
+        <div class="proj-thumb carousel bg-mocca no-round" data-carousel>
+          <div class="carousel-track">
+            <div class="cs"><img src="assets/img/projects/Mocca/MoccaUi.png" alt="Mocca UX/UI design board" /></div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag ui">UI / UX</span>
+          <h3>Mocca</h3>
+          <p>UX/UI design for a fashion shopping mobile app — from authentication and product discovery to wishlist, cart, payment, order confirmation, and profile flows.</p>
+          <div class="proj-stack">
+            <span>Figma</span><span>UX Research</span><span>User Flow</span><span>Prototyping</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section-pad wrap" id="experience">
+    <div class="section-head">
+      <div class="eyebrow reveal"><span class="idx">04</span> Experience</div>
+      <h2 class="reveal" data-d="1">Experience &amp; Education.</h2>
+    </div>
+    <div class="timeline reveal" data-d="1">
+
+      <div class="tl-item">
+        <div class="tl-when">Jan 2026 — May 2026</div>
+        <div class="tl-role">
+          <h3>Frontend Developer Intern</h3>
+          <div class="co">Geekstart Co., Ltd.</div>
+          <p>Contributed to production frontend work for One Call and Insight, building API-connected user flows, form-heavy interfaces, reusable components, and Thai/English localization. Also helped refactor the codebase to improve maintainability and remove unused code.</p>
+          <div class="tl-stack chips">
+            <span class="chip">React.js</span>
+            <span class="chip">React Hook Form</span>
+            <span class="chip">Yup</span>
+            <span class="chip">Axios</span>
+            <span class="chip">SWR</span>
+            <span class="chip">i18n</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-when">2022 — <span class="now">Present</span></div>
+        <div class="tl-role">
+          <h3>Computer Science</h3>
+          <div class="co">Bangkok University — Faculty of IT &amp; Innovation</div>
+          <p>Focused on software engineering, database systems, algorithms, and machine learning. Current GPA: 3.75 / 4.00.</p>
+          <div class="tl-stack chips">
+            <span class="chip">Algorithms</span>
+            <span class="chip">Database Systems</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Software Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-when">2012 — 2021</div>
+        <div class="tl-role">
+          <h3>High School Diploma</h3>
+          <div class="co">Saint Louis School</div>
+          <p>Completed secondary education with a strong foundation in mathematics and science. GPA: 3.70 / 4.00.</p>
+          <div class="tl-stack chips">
+            <span class="chip">GPA 3.70</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact wrap" id="contact">
+    <div class="contact-inner">
+      <div class="eyebrow reveal" style="justify-content:center;"><span class="idx">05</span> Contact</div>
+      <h2 class="reveal" data-d="1">Let's build something<br />great together.</h2>
+      <a href="mailto:kittiphat.ktp47@gmail.com" class="mail reveal" data-d="2">kittiphat.ktp47@gmail.com</a>
+      <div class="socials reveal" data-d="3">
+        <a href="https://www.linkedin.com/in/kittiphat-khomsanith-5a8639413/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 3H3.6C3 3 2.5 3.5 2.5 4.1v15.8c0 .6.5 1.1 1.1 1.1h16.8c.6 0 1.1-.5 1.1-1.1V4.1c0-.6-.5-1.1-1.1-1.1zM8.3 18.3h-2.7V9.7h2.7v8.6zM6.9 8.5a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2zm11.4 9.8h-2.7v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3h-2.7V9.7h2.6v1.2h.1c.4-.7 1.2-1.4 2.5-1.4 2.7 0 3.2 1.8 3.2 4.1v4.7z"/></svg>
+          LinkedIn
+        </a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Kittiphat Khomsanith. All rights reserved.</span>
+      <span>Designed with care · <a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <img class="lb-img" id="lbImg" src="" alt="" />
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
