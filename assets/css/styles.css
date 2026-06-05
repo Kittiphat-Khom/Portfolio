@@ -378,6 +378,7 @@ section { position: relative; }
 }
 
 .proj-info { position: relative; padding: 46px 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+.proj-info:has(.demo-login) { padding-bottom: 72px; }
 .proj-tag { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 4px 9px; border-radius: 6px; align-self: flex-start; margin-bottom: 14px; }
 .proj-tag.ui { color: oklch(0.55 0.16 320); background: oklch(0.55 0.16 320 / .12); }
 .proj-tag.webapp { color: var(--accent-ink); background: var(--accent-bg); }
@@ -396,12 +397,14 @@ section { position: relative; }
   letter-spacing: 0.04em;
 }
 .demo-login {
-  display: inline-flex;
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 24px;
+  display: flex;
   align-items: center;
   gap: 8px;
-  align-self: flex-start;
-  max-width: 100%;
-  margin-top: 10px;
+  margin: 0;
   color: var(--ink-soft);
   font-family: var(--mono);
   font-size: 11px;
@@ -606,6 +609,11 @@ section { position: relative; }
   .proj-card:nth-child(even) .proj-thumb { order: 0; border-left: none; border-bottom: 1px solid var(--line); }
   .proj-thumb { min-height: 220px; border-right: none; border-bottom: 1px solid var(--line); }
   .proj-info { padding: 24px; }
+  .proj-info:has(.demo-login) { padding-bottom: 24px; }
+  .demo-login {
+    position: static;
+    margin-top: 10px;
+  }
   .proj-link {
     position: static;
     align-self: flex-start;
