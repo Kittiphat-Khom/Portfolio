@@ -396,25 +396,31 @@ section { position: relative; }
   letter-spacing: 0.04em;
 }
 .demo-login {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-flex;
   align-items: center;
-  gap: 7px;
-  margin-top: 14px;
+  gap: 8px;
+  align-self: flex-start;
+  max-width: 100%;
+  margin-top: 10px;
   color: var(--ink-soft);
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 11px;
 }
 .demo-login > span {
   color: var(--accent);
   font-weight: 600;
+  white-space: nowrap;
 }
 .demo-login code {
-  padding: 5px 8px;
+  min-width: 0;
+  padding: 4px 8px;
   border: 1px solid var(--line);
   border-radius: 7px;
   color: var(--ink);
   background: var(--bg-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .proj-link {
   position: absolute;
