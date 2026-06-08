@@ -1,10 +1,6 @@
-/* ============================================================
-   main.js — theme, scroll-reveal, nav, filter, counters
-   ============================================================ */
 (function () {
   "use strict";
 
-  /* ---------- Theme ---------- */
   var root = document.documentElement;
   var stored = null;
   try { stored = localStorage.getItem("pf-theme"); } catch (e) {}
@@ -22,7 +18,6 @@
     });
   }
 
-  /* ---------- Nav scrolled state ---------- */
   var nav = document.getElementById("nav");
   function onScroll() {
     if (nav) nav.classList.toggle("scrolled", window.scrollY > 24);
@@ -30,7 +25,6 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- Mobile menu ---------- */
   var burger = document.getElementById("burger");
   var menu = document.getElementById("mobileMenu");
   var menuClose = document.getElementById("menuClose");
@@ -43,7 +37,6 @@
     });
   }
 
-  /* ---------- Scroll reveal ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -59,7 +52,6 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---------- Active nav link via section spy ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
   var sections = navLinks
     .map(function (a) { return document.querySelector(a.getAttribute("href")); })
@@ -78,7 +70,6 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
-  /* ---------- Project filter ---------- */
   var filters = document.getElementById("filters");
   var grid = document.getElementById("projGrid");
   if (filters && grid) {
@@ -97,7 +88,6 @@
     });
   }
 
-  /* ---------- Animated counters ---------- */
   function animateCount(el) {
     var target = parseFloat(el.getAttribute("data-count"));
     var suffix = el.getAttribute("data-suffix") || "";
@@ -124,7 +114,6 @@
     counters.forEach(animateCount);
   }
 
-  /* ---------- Lightbox ---------- */
   var lb = document.getElementById('lb');
   var lbImg = document.getElementById('lbImg');
   var lbClose = document.getElementById('lbClose');
@@ -170,7 +159,6 @@
     });
   }
 
-  /* ---------- Carousels ---------- */
   document.querySelectorAll('.carousel[data-carousel]').forEach(function (carousel) {
     var track = carousel.querySelector('.carousel-track');
     var imgs = track.querySelectorAll('img');
@@ -178,7 +166,6 @@
     var total = imgs.length;
     var current = 0;
 
-    // build dots
     imgs.forEach(function (_, i) {
       var btn = document.createElement('button');
       if (i === 0) btn.classList.add('active');
@@ -196,7 +183,6 @@
 
     setInterval(function () { go(current + 1); }, 3000);
 
-    // click image to open lightbox
     track.querySelectorAll('img').forEach(function (img, i) {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', function () { openLb(Array.prototype.slice.call(imgs), i); });
